@@ -17,7 +17,7 @@ Parameters:
     Description: The ID of the authentication secret.  
 
 Resources:
-  RootCertsLayer:
+  SNSPayloadLoggeRootCertsLayer:
     Type: AWS::Serverless::LayerVersion
     Properties:
       Description: Layer to store root certificates for RESTful API access/scritp tneed to download root certs
