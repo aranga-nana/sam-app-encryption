@@ -20,7 +20,7 @@ Resources:
   RootCertsLayer:
     Type: AWS::Serverless::LayerVersion
     Properties:
-      Description: Layer to store root certificates for RESTful API access
+      Description: Layer to store root certificates for RESTful API access/scritp tneed to download root certs
       ContentUri: ./certs-layer
       CompatibleRuntimes:
         - nodejs20.x
@@ -49,3 +49,10 @@ Resources:
       Timeout: 100
       Policies:
         - AWSLambdaBasicExecutionRole
+    Metadata:
+      SamResourceId: SNSPayloadLogger
+      TestEvent:
+        SNSPayloadEvent:
+          TopicArn: "arn:aws:sns:us-west-2:123456789012:SimpleTopic"
+          Message: "This is a notification from SNS"
+          Subject: "SNS Notification"
