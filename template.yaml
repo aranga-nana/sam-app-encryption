@@ -12,10 +12,9 @@ Parameters:
   LambdaExecutionRoleArn:
     Type: String
     Description: The ARN of the IAM role that the Lambda function will assume.
-
-  AUTH_ID:
+  AuthId:
     Type: String
-    Description: The authentication ID for the environment.
+    Description: The ID of the authentication secret.  
 
 Resources:
   RootCertsLayer:
@@ -39,8 +38,8 @@ Resources:
         - !Ref RootCertsLayer
       Environment:
         Variables:
-          AUTH_SECRET:AQICAHjq7bQ8Cv+95r3Wh19xD45CLyVa5jBOjoE2raeFf3G1LQEEdqtMne/YSRaxsW8xPVVOAAAAcDBuBgkqhkiG9w0BBwagYTBfAgEAMFoGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQM+SufiCCfwcxh6t4bAgEQgC3Oson6YLs6zZ10md+FGGuLoShtI6NHWyuXCQfti7HqW18oPEJjbUhQI9rG13c=
-          AUTH_ID: !Ref AUTH_ID
+          AUTH_SECRET: "inject-here-s"
+          AUTH_ID: !Ref AuthId
       Events:
         SNSTopicEvent:
           Type: SNS

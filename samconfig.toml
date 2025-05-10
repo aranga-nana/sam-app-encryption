@@ -19,7 +19,7 @@ stack_name = "sam-app-test"
 capabilities = "CAPABILITY_IAM"
 s3_bucket = "sam-acnonline"
 confirm_changeset = false
-parameter_overrides = "SNSTopicArn=arn:aws:sns:ap-southeast-2:363762816039:SimpleTopic-test LambdaExecutionRoleArn=arn:aws:iam::363762816039:role/lambda-role NewParameter=NewValue AUTH_ID=test_aut"
+parameter_overrides = "SNSTopicArn=arn:aws:sns:ap-southeast-2:363762816039:SimpleTopic-test LambdaExecutionRoleArn=arn:aws:iam::363762816039:role/lambda-role AuthId=test_aut"
 
 
 [default.deploy.parameters.prod]

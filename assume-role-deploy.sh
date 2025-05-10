@@ -47,7 +47,7 @@ fi
 echo "Encrypted password: $ENCRYPTED_PASSWORD"
 
 # Replace the placeholder in the environment variable file or configuration
-sed -i -e "s|inject-her-a|$ENCRYPTED_PASSWORD|g" template.yaml
+sed -i -e "s|inject-here-s|$ENCRYPTED_PASSWORD|g" template.yaml
 
 
 # Step 2: Assume the role
@@ -81,8 +81,8 @@ unset AWS_ACCESS_KEY_ID
 unset AWS_SECRET_ACCESS_KEY
 unset AWS_SESSION_TOKEN
 
-sed -i -e "s|$ENCRYPTED_PASSWORD|inject-her-a|g" template.yaml
+sed -i -e "s|$ENCRYPTED_PASSWORD|inject-here-s|g" template.yaml
 echo "Deployment complete. Temporary credentials cleared."
-rm -f rm -rf template-*.yaml
-rm -f samconfig-*.toml 
+rm -f rm -rf template.yaml-*
+rm -f samconfig.toml-* 
  

@@ -1,3 +1,6 @@
 node_modules
 dist
-.awt-cache
+.aws-cache
+.aws-sam
+samconfig.toml-e
+template.yaml-e

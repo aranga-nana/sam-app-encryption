@@ -2,8 +2,7 @@
     "test": {
       "SNSTopicArn": "arn:aws:sns:ap-southeast-2:363762816039:SimpleTopic-test",
       "LambdaExecutionRoleArn": "arn:aws:iam::363762816039:role/lambda-role",
-      "NewParameter": "NewValue",
-      "AUTH_ID": "test_aut"
+      "AuthId": "test_aut"
     },
     "prod": {
       "SNSTopicArn": "arn:aws:sns:ap-southeast-2:363762816039:SimpleTopic-prod",
